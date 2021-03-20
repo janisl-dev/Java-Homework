@@ -12,7 +12,7 @@ public class HelloUser {
         fullName = fullName.trim();
 
         String name = fullName.substring(0, fullName.indexOf(" "));
-        String surname = fullName.substring(fullName.lastIndexOf(" ") +1);
+        String surname = fullName.substring(fullName.lastIndexOf(" ") + 1);
 
         name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
 
