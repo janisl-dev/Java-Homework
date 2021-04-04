@@ -25,20 +25,15 @@ public class Matrices {
                     array2D[i][j] = scanner.nextInt();
                 }
             }
-            scanner.close();
-
-            for (int i = 0; i < array2D.length; i++) {
-                for (int j = 0; j < array2D[i].length; j++) {
-                }
-            }
             System.out.println();
         }
-        if (input.equalsIgnoreCase("B")) {
+        else if (input.equalsIgnoreCase("B")) {
             for (int i = 0; i < array2D.length; i++) {
                 for (int j = 0; j < array2D[i].length; j++) {
                     array2D[i][j] = random.nextInt(100) + 1;
                 }
             }
+            scanner.close();
         }
         for (int[] row : array2D) {
             for (int column : row) {
@@ -48,8 +43,9 @@ public class Matrices {
         }
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (i != j && i + j + 1 != N)
+                if (i != j) {
                     array2D[i][j] = 0;
+                }
             }
         }
         System.out.println();
